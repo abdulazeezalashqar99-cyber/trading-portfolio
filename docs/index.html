@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" data-health="ok">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demand Zone Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0F1A;
+    --surface: #12172A;
+    --surface-2: #171D33;
+    --border: #232A42;
+    --border-strong: #323B5C;
+    --text-primary: #E7EAF3;
+    --text-secondary: #8A93AC;
+    --text-muted: #5C6584;
+    --a-plus: #34D399;
+    --a-plus-bg: #12291F;
+    --a-grade: #38BDF8;
+    --a-grade-bg: #102436;
+    --b-grade: #FBBF24;
+    --danger: #F87171;
+    --danger-bg: #2B1616;
+    --ok: #34D399;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    line-height: 1.5;
+    padding-bottom: 4rem;
+  }
+  h1, h2, .display {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+  header.top {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  header.top .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand h1 { font-size: 20px; }
+  .pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--ok);
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  [data-health="degraded"] .pulse-dot { background: var(--danger); }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  .status-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 24px 0;
+  }
+  .status-cell {
+    background: var(--surface);
+    padding: 14px 16px;
+  }
+  .status-cell .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .status-cell .value {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .status-cell .value.health-ok { color: var(--ok); }
+  .status-cell .value.health-degraded { color: var(--danger); }
+
+  .filter-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 24px 0;
+  }
+  .filter-bar .filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+  }
+  .filter-field { display: flex; flex-direction: column; gap: 6px; }
+  .filter-field label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .filter-field input[type="text"],
+  .filter-field input[type="number"] {
+    background: var(--surface-2);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    padding: 7px 10px;
+    width: 140px;
+  }
+  .filter-field input:focus { outline: 1px solid var(--a-grade); }
+  .chip-group { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--surface-2);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    border-radius: 999px;
+    padding: 4px 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .chip.active {
+    background: var(--a-grade-bg);
+    border-color: var(--a-grade);
+    color: var(--a-grade);
+  }
+  .filter-clear {
+    font-size: 12px;
+    color: var(--text-secondary);
+    background: none;
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .filter-clear:hover { color: var(--text-primary); border-color: var(--text-secondary); }
+  .filter-results {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  section.group { margin: 36px 0; }
+  section.group h2 {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }  section.group .count-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 1px 9px;
+  }
+  section.group .empty {
+    color: var(--text-muted);
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .symbol { font-weight: 500; font-size: 15px; }
+  .tf-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 6px;
+  }
+  .grade-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 999px;
+    padding: 2px 10px;
+  }
+  .grade-pill.grade-A\+ { background: var(--a-plus-bg); color: var(--a-plus); }
+  .grade-pill.grade-A { background: var(--a-grade-bg); color: var(--a-grade); }
+  .grade-pill.grade-B { background: #2B2410; color: var(--b-grade); }
+  .grade-pill.grade-C { background: var(--surface-2); color: var(--text-muted); }
+
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 3px 0;
+    color: var(--text-secondary);
+  }
+  .card-row .v { color: var(--text-primary); font-family: 'IBM Plex Mono', monospace; }
+  .status-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .status-tag.st-ENTERED { background: var(--a-plus-bg); color: var(--a-plus); }
+  .status-tag.st-WAITING { background: var(--surface-2); color: var(--text-secondary); }
+
+  footer {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 480px) {
+    .cards { grid-template-columns: 1fr; }
+    header.top .wrap { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="pulse-dot" id="health-dot"></span>
+      <h1>Demand Zone Scanner</h1>
+    </div>
+    <div class="mono" style="font-size: 13px; color: var(--text-secondary);" id="last-scan">—</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="status-bar" id="status-bar"></div>
+
+  <div class="filter-bar">
+    <div class="filter-row">
+      <div class="filter-field">
+        <label for="f-symbol">Symbol</label>
+        <input type="text" id="f-symbol" placeholder="e.g. BTC, DOT...">
+      </div>
+      <div class="filter-field">
+        <label for="f-min-score">Min score</label>
+        <input type="number" id="f-min-score" min="0" max="100" placeholder="0">
+      </div>
+      <div class="filter-field">
+        <label>Timeframe</label>
+        <div class="chip-group" id="f-timeframe" data-field="timeframe">
+          <span class="chip active" data-value="3D">3D</span>
+          <span class="chip active" data-value="1D">1D</span>
+          <span class="chip active" data-value="4H">4H</span>
+        </div>
+      </div>
+      <div class="filter-field">
+        <label>Grade</label>
+        <div class="chip-group" id="f-grade" data-field="grade">
+          <span class="chip active" data-value="A+">A+</span>
+          <span class="chip active" data-value="A">A</span>
+          <span class="chip active" data-value="B">B</span>
+          <span class="chip active" data-value="C">C</span>
+        </div>
+      </div>
+      <div class="filter-field">
+        <label>BTC condition</label>
+        <div class="chip-group" id="f-btc" data-field="btc">
+          <span class="chip active" data-value="Strong">Strong</span>
+          <span class="chip active" data-value="Neutral">Neutral</span>
+          <span class="chip active" data-value="Weak">Weak</span>
+        </div>
+      </div>
+      <div class="filter-field">
+        <label>Confluence</label>
+        <div class="chip-group" id="f-confluence" data-field="confluence">
+          <span class="chip active" data-value="any">Any</span>
+          <span class="chip" data-value="3d">Has 3D</span>
+          <span class="chip" data-value="4h">Has 4H</span>
+          <span class="chip" data-value="multi">Multi-TF only</span>
+        </div>
+      </div>
+      <button class="filter-clear" id="f-clear">Clear filters</button>
+    </div>
+    <div class="filter-results" id="filter-results"></div>
+  </div>
+
+  <section class="group">
+    <h2>A+ opportunities <span class="count-badge" id="count-a-plus">0</span></h2>
+    <div class="cards" id="a-plus-cards"></div>
+    <div class="empty" id="a-plus-empty" style="display:none;">No A+ opportunities match your filters.</div>
+  </section>
+
+  <section class="group">
+    <h2>A opportunities <span class="count-badge" id="count-a">0</span></h2>
+    <div class="cards" id="a-cards"></div>
+    <div class="empty" id="a-empty" style="display:none;">No A opportunities match your filters.</div>
+  </section>
+
+  <section class="group">
+    <h2>Active watchlist <span class="count-badge" id="count-watchlist">0</span></h2>
+    <div class="cards" id="watchlist-cards"></div>
+    <div class="empty" id="watchlist-empty" style="display:none;">Nothing on the watchlist matches your filters.</div>
+  </section>
+
+  <section class="group">
+    <h2>Triggered alerts <span class="count-badge" id="count-alerts">0</span></h2>
+    <div class="cards" id="alert-cards"></div>
+    <div class="empty" id="alert-empty" style="display:none;">No alerts match your filters.</div>
+  </section>
+</div>
+
+<footer>
+  Analysis and opportunity-discovery tool only — no automated trading. Always confirm on your own chart before acting.
+</footer>
+
+<script>
+let rawData = null;
+const filters = {
+  symbol: '',
+  minScore: 0,
+  timeframe: new Set(['3D', '1D', '4H']),
+  grade: new Set(['A+', 'A', 'B', 'C']),
+  btc: new Set(['Strong', 'Neutral', 'Weak']),
+  confluence: 'any',
+};
+
+async function loadDashboard() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    rawData = await res.json();
+  } catch (e) {
+    document.getElementById('last-scan').textContent = 'Failed to load data.json';
+    return;
+  }
+
+  const s = rawData.system_status;
+  document.documentElement.setAttribute('data-health', (s.health || 'ok').toLowerCase());
+  document.getElementById('last-scan').textContent = 'Last scan: ' + formatTime(rawData.generated_at);
+
+  const statusBar = document.getElementById('status-bar');
+  statusBar.innerHTML = [
+    cell('Health', s.health, s.health === 'DEGRADED' ? 'health-degraded' : 'health-ok'),
+    cell('Coins scanned', s.coins_scanned ?? '—'),
+    cell('Universe size', s.universe_size ?? '—'),
+    cell('Active zones', s.active_zones ?? 0),
+    cell('Alerts sent', s.total_alerts_triggered ?? 0),
+  ].join('');
+
+  setupFilterControls();
+  renderAll();
+}
+
+function setupFilterControls() {
+  document.getElementById('f-symbol').addEventListener('input', (e) => {
+    filters.symbol = e.target.value.trim().toUpperCase();
+    renderAll();
+  });
+  document.getElementById('f-min-score').addEventListener('input', (e) => {
+    const v = parseFloat(e.target.value);
+    filters.minScore = isNaN(v) ? 0 : v;
+    renderAll();
+  });
+
+  ['f-timeframe', 'f-grade', 'f-btc'].forEach((groupId) => {
+    const group = document.getElementById(groupId);
+    const field = group.dataset.field;
+    const targetSet = field === 'timeframe' ? filters.timeframe : field === 'grade' ? filters.grade : filters.btc;
+    group.querySelectorAll('.chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const value = chip.dataset.value;
+        if (targetSet.has(value)) {
+          targetSet.delete(value);
+          chip.classList.remove('active');
+        } else {
+          targetSet.add(value);
+          chip.classList.add('active');
+        }
+        renderAll();
+      });
+    });
+  });
+
+  document.getElementById('f-confluence').querySelectorAll('.chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#f-confluence .chip').forEach((c) => c.classList.remove('active'));
+      chip.classList.add('active');
+      filters.confluence = chip.dataset.value;
+      renderAll();
+    });
+  });
+
+  document.getElementById('f-clear').addEventListener('click', () => {
+    filters.symbol = '';
+    filters.minScore = 0;
+    filters.timeframe = new Set(['3D', '1D', '4H']);
+    filters.grade = new Set(['A+', 'A', 'B', 'C']);
+    filters.btc = new Set(['Strong', 'Neutral', 'Weak']);
+    filters.confluence = 'any';
+
+    document.getElementById('f-symbol').value = '';
+    document.getElementById('f-min-score').value = '';
+    document.querySelectorAll('#f-timeframe .chip, #f-grade .chip, #f-btc .chip').forEach((c) => c.classList.add('active'));
+    document.querySelectorAll('#f-confluence .chip').forEach((c) => c.classList.remove('active'));
+    document.querySelector('#f-confluence .chip[data-value="any"]').classList.add('active');
+
+    renderAll();
+  });
+}
+
+function matchesFilters(z) {
+  if (filters.symbol && !z.symbol.toUpperCase().includes(filters.symbol)) return false;
+  if ((z.score ?? 0) < filters.minScore) return false;
+  if (!filters.timeframe.has(z.timeframe)) return false;
+  if (!filters.grade.has(z.grade)) return false;
+  if (z.btc_condition && !filters.btc.has(z.btc_condition)) return false;
+
+  const confluent = z.confluent_timeframes || [];
+  if (filters.confluence === '3d' && !confluent.includes('3D')) return false;
+  if (filters.confluence === '4h' && !confluent.includes('4H')) return false;
+  if (filters.confluence === 'multi' && confluent.length < 2) return false;
+
+  return true;
+}
+
+function renderAll() {
+  if (!rawData) return;
+  const aPlus = rawData.a_plus_opportunities.filter(matchesFilters);
+  const a = rawData.a_opportunities.filter(matchesFilters);
+  const watchlist = rawData.watchlist.filter(matchesFilters);
+  const alerts = rawData.triggered_alerts.filter(matchesFilters);
+
+  renderCards('a-plus', 'count-a-plus', aPlus, opportunityCard);
+  renderCards('a', 'count-a', a, opportunityCard);
+  renderCards('watchlist', 'count-watchlist', watchlist, opportunityCard);
+  renderCards('alert', 'count-alerts', alerts, alertCard);
+
+  const totalShown = aPlus.length + a.length + watchlist.length + alerts.length;
+  const totalAll = rawData.a_plus_opportunities.length + rawData.a_opportunities.length
+    + rawData.watchlist.length + rawData.triggered_alerts.length;
+  document.getElementById('filter-results').textContent =
+    `Showing ${totalShown} of ${totalAll} zones across all sections`;
+}
+
+function cell(label, value, extraClass) {
+  return `<div class="status-cell"><div class="label">${label}</div><div class="value ${extraClass || ''}">${value}</div></div>`;
+}
+
+function renderCards(prefix, countId, items, renderFn) {
+  const container = document.getElementById(prefix + '-cards');
+  const emptyEl = document.getElementById(prefix + '-empty');
+  const countEl = document.getElementById(countId);
+  if (countEl) countEl.textContent = items.length;
+
+  if (!items.length) {
+    container.innerHTML = '';
+    if (emptyEl) emptyEl.style.display = 'block';
+    return;
+  }
+  if (emptyEl) emptyEl.style.display = 'none';
+  container.innerHTML = items.map(renderFn).join('');
+}
+
+function opportunityCard(z) {
+  const gradeClass = 'grade-' + z.grade.replace('+', '\\+');
+  return `
+    <div class="card">
+      <div class="card-top">
+        <div><span class="symbol">${z.symbol}</span><span class="tf-badge">${z.timeframe}</span></div>
+        <span class="grade-pill ${gradeClass}">${z.grade} · ${Math.round(z.score)}</span>
+      </div>
+      <div class="card-row"><span>Zone</span><span class="v">${fmt(z.zone_low)} – ${fmt(z.zone_high)}</span></div>
+      <div class="card-row"><span>Price</span><span class="v">${fmt(z.current_price)}</span></div>
+      <div class="card-row"><span>Distance</span><span class="v">${z.distance_pct}%</span></div>
+      <div class="card-row"><span>Status</span><span class="status-tag st-${z.status}">${z.status}</span></div>
+    </div>`;
+}
+
+function alertCard(z) {
+  const gradeClass = 'grade-' + z.grade.replace('+', '\\+');
+  return `
+    <div class="card">
+      <div class="card-top">
+        <div><span class="symbol">${z.symbol}</span><span class="tf-badge">${z.timeframe}</span></div>
+        <span class="grade-pill ${gradeClass}">${z.grade} · ${Math.round(z.score)}</span>
+      </div>
+      <div class="card-row"><span>Zone</span><span class="v">${fmt(z.zone_low)} – ${fmt(z.zone_high)}</span></div>
+      <div class="card-row"><span>Alerted</span><span class="v">${formatTime(z.alert_time)}</span></div>
+      <div class="card-row"><span>BTC condition</span><span class="v">${z.btc_condition || '—'}</span></div>
+    </div>`;
+}
+
+function fmt(n) {
+  if (n === null || n === undefined) return '—';
+  const abs = Math.abs(n);
+  const decimals = abs >= 100 ? 2 : abs >= 1 ? 4 : 6;
+  let s = Number(n).toFixed(decimals);
+  if (s.includes('.')) s = s.replace(/0+$/, '').replace(/\.$/, '');
+  return s;
+}
+
+function formatTime(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return '—';
+  return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
+
+loadDashboard();
+</script>
+
+</body>
+</html>
