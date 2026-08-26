@@ -21,7 +21,7 @@ from .http_client import get_with_retry
 
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://api.binance.com/api/v3"
+BASE_URL = "https://data-api.binance.vision/api/v3"
 KLINES_ENDPOINT = f"{BASE_URL}/klines"
 EXCHANGE_INFO_ENDPOINT = f"{BASE_URL}/exchangeInfo"
 
