@@ -1,0 +1,57 @@
+name: Demand Zone Scanner
+
+on:
+  schedule:
+    # every 30 minutes, UTC. GitHub Actions cron has no timezone option
+    # and no guaranteed exact timing - expect a few minutes of drift,
+    # especially at the top of the hour when load is highest.
+    #
+    # COST NOTE: each run (checkout + install + ~100-symbol scan) takes
+    # roughly 1.5-3 minutes. On a PUBLIC repo, GitHub-hosted runners are
+    # free with no minute cap, so you can safely tighten this to '*/15'
+    # or even '*/5' (the platform minimum). On a PRIVATE repo, the free
+    # tier is 2,000 minutes/month - every 30 min (~1,440 runs/month at
+    # ~2.5 min each) comfortably fits; every 15 min likely will not.
+    # See README.md's "GitHub Actions cost" section before changing this.
+    - cron: '*/30 * * * *'
+  workflow_dispatch: {}  # lets you trigger a run manually from the Actions tab
+
+# prevents overlapping runs if one scan takes longer than the interval
+concurrency:
+  group: demand-zone-scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # need write access to commit the updated state db back
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_scheduled_scan.py
+
+      - name: Commit updated state database
+        run: |
+          git config user.name "demand-zone-scanner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add db/scanner_state.db
+          git diff --staged --quiet && echo "No state changes to commit" || git commit -m "Update scanner state [skip ci]"
+          git push
