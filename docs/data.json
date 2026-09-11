@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-11T15:41:18.347507+00:00",
+  "generated_at": "2026-09-11T16:10:50.902182+00:00",
   "system_status": {
-    "last_scan_time": "2026-09-11T15:41:18.347507+00:00",
+    "last_scan_time": "2026-09-11T16:10:50.902182+00:00",
     "coins_scanned": 52,
     "universe_size": 52,
     "active_zones": 62,
@@ -21,8 +21,8 @@
       "timeframe": "3D",
       "zone_low": 1.836,
       "zone_high": 2.015,
-      "current_price": 2.396,
-      "distance_pct": 18.91,
+      "current_price": 2.388,
+      "distance_pct": 18.51,
       "score": 89.7,
       "grade": "A",
       "status": "WAITING",
@@ -32,7 +32,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-14T00:00:00+00:00"
@@ -42,8 +42,8 @@
       "timeframe": "3D",
       "zone_low": 0.2267,
       "zone_high": 0.2644,
-      "current_price": 0.4213,
-      "distance_pct": 59.34,
+      "current_price": 0.4117,
+      "distance_pct": 55.71,
       "score": 88.8,
       "grade": "A",
       "status": "WAITING",
@@ -52,7 +52,7 @@
         "1D",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-05-18T00:00:00+00:00"
@@ -62,8 +62,8 @@
       "timeframe": "1D",
       "zone_low": 1.913,
       "zone_high": 1.967,
-      "current_price": 2.396,
-      "distance_pct": 21.81,
+      "current_price": 2.388,
+      "distance_pct": 21.4,
       "score": 87.6,
       "grade": "A",
       "status": "WAITING",
@@ -73,7 +73,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-15T00:00:00+00:00"
@@ -104,8 +104,8 @@
       "timeframe": "3D",
       "zone_low": 0.0811,
       "zone_high": 0.0863,
-      "current_price": 0.1541,
-      "distance_pct": 78.56,
+      "current_price": 0.1501,
+      "distance_pct": 73.93,
       "score": 86.8,
       "grade": "A",
       "status": "WAITING",
@@ -115,7 +115,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-14T00:00:00+00:00"
@@ -125,8 +125,8 @@
       "timeframe": "1D",
       "zone_low": 0.0811,
       "zone_high": 0.0855,
-      "current_price": 0.1541,
-      "distance_pct": 80.23,
+      "current_price": 0.1501,
+      "distance_pct": 75.56,
       "score": 86.8,
       "grade": "A",
       "status": "WAITING",
@@ -136,7 +136,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -167,8 +167,8 @@
       "timeframe": "1D",
       "zone_low": 0.3053,
       "zone_high": 0.3189,
-      "current_price": 0.3638,
-      "distance_pct": 14.08,
+      "current_price": 0.3585,
+      "distance_pct": 12.42,
       "score": 86.2,
       "grade": "A",
       "status": "WAITING",
@@ -178,7 +178,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-07-14T00:00:00+00:00"
@@ -188,8 +188,8 @@
       "timeframe": "1D",
       "zone_low": 0.2267,
       "zone_high": 0.2504,
-      "current_price": 0.4213,
-      "distance_pct": 68.25,
+      "current_price": 0.4117,
+      "distance_pct": 64.42,
       "score": 83.8,
       "grade": "A",
       "status": "WAITING",
@@ -198,7 +198,7 @@
         "3D",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-05-19T00:00:00+00:00"
@@ -208,8 +208,8 @@
       "timeframe": "3D",
       "zone_low": 0.0767,
       "zone_high": 0.083,
-      "current_price": 0.0943,
-      "distance_pct": 13.61,
+      "current_price": 0.0925,
+      "distance_pct": 11.45,
       "score": 83.5,
       "grade": "A",
       "status": "WAITING",
@@ -219,7 +219,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-17T00:00:00+00:00"
@@ -229,8 +229,8 @@
       "timeframe": "1D",
       "zone_low": 74.1,
       "zone_high": 75.71,
-      "current_price": 103.47,
-      "distance_pct": 36.67,
+      "current_price": 102.31,
+      "distance_pct": 35.13,
       "score": 83.4,
       "grade": "A",
       "status": "WAITING",
@@ -240,7 +240,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T00:00:00+00:00"
@@ -250,8 +250,8 @@
       "timeframe": "4H",
       "zone_low": 76.63,
       "zone_high": 77.17,
-      "current_price": 103.48,
-      "distance_pct": 34.09,
+      "current_price": 102.31,
+      "distance_pct": 32.58,
       "score": 83.4,
       "grade": "A",
       "status": "WAITING",
@@ -261,7 +261,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
@@ -271,8 +271,8 @@
       "timeframe": "4H",
       "zone_low": 2.015,
       "zone_high": 2.064,
-      "current_price": 2.396,
-      "distance_pct": 16.09,
+      "current_price": 2.388,
+      "distance_pct": 15.7,
       "score": 82.9,
       "grade": "A",
       "status": "WAITING",
@@ -282,7 +282,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T08:00:00+00:00"
@@ -334,8 +334,8 @@
       "timeframe": "1D",
       "zone_low": 0.0831,
       "zone_high": 0.091,
-      "current_price": 0.1483,
-      "distance_pct": 62.97,
+      "current_price": 0.145,
+      "distance_pct": 59.34,
       "score": 81.1,
       "grade": "A",
       "status": "WAITING",
@@ -345,7 +345,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-30T00:00:00+00:00"
@@ -355,8 +355,8 @@
       "timeframe": "1D",
       "zone_low": 62535.24,
       "zone_high": 63617.45,
-      "current_price": 78781.13,
-      "distance_pct": 23.84,
+      "current_price": 77955.64,
+      "distance_pct": 22.54,
       "score": 80.9,
       "grade": "A",
       "status": "WAITING",
@@ -366,7 +366,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T00:00:00+00:00"
@@ -376,8 +376,8 @@
       "timeframe": "3D",
       "zone_low": 29.5,
       "zone_high": 30.7,
-      "current_price": 58.1,
-      "distance_pct": 89.25,
+      "current_price": 56.6,
+      "distance_pct": 84.36,
       "score": 80.9,
       "grade": "A",
       "status": "WAITING",
@@ -387,7 +387,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-15T00:00:00+00:00"
@@ -397,8 +397,8 @@
       "timeframe": "1D",
       "zone_low": 6.22,
       "zone_high": 6.455,
-      "current_price": 7.714,
-      "distance_pct": 19.5,
+      "current_price": 7.637,
+      "distance_pct": 18.31,
       "score": 80.8,
       "grade": "A",
       "status": "WAITING",
@@ -408,7 +408,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -420,8 +420,8 @@
       "timeframe": "3D",
       "zone_low": 1.836,
       "zone_high": 2.015,
-      "current_price": 2.396,
-      "distance_pct": 18.91,
+      "current_price": 2.388,
+      "distance_pct": 18.51,
       "score": 89.7,
       "grade": "A",
       "status": "WAITING",
@@ -431,7 +431,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-14T00:00:00+00:00"
@@ -441,8 +441,8 @@
       "timeframe": "3D",
       "zone_low": 0.2267,
       "zone_high": 0.2644,
-      "current_price": 0.4213,
-      "distance_pct": 59.34,
+      "current_price": 0.4117,
+      "distance_pct": 55.71,
       "score": 88.8,
       "grade": "A",
       "status": "WAITING",
@@ -451,7 +451,7 @@
         "1D",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-05-18T00:00:00+00:00"
@@ -461,8 +461,8 @@
       "timeframe": "1D",
       "zone_low": 1.913,
       "zone_high": 1.967,
-      "current_price": 2.396,
-      "distance_pct": 21.81,
+      "current_price": 2.388,
+      "distance_pct": 21.4,
       "score": 87.6,
       "grade": "A",
       "status": "WAITING",
@@ -472,7 +472,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-15T00:00:00+00:00"
@@ -503,8 +503,8 @@
       "timeframe": "3D",
       "zone_low": 0.0811,
       "zone_high": 0.0863,
-      "current_price": 0.1541,
-      "distance_pct": 78.56,
+      "current_price": 0.1501,
+      "distance_pct": 73.93,
       "score": 86.8,
       "grade": "A",
       "status": "WAITING",
@@ -514,7 +514,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-14T00:00:00+00:00"
@@ -524,8 +524,8 @@
       "timeframe": "1D",
       "zone_low": 0.0811,
       "zone_high": 0.0855,
-      "current_price": 0.1541,
-      "distance_pct": 80.23,
+      "current_price": 0.1501,
+      "distance_pct": 75.56,
       "score": 86.8,
       "grade": "A",
       "status": "WAITING",
@@ -535,7 +535,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -566,8 +566,8 @@
       "timeframe": "1D",
       "zone_low": 0.3053,
       "zone_high": 0.3189,
-      "current_price": 0.3638,
-      "distance_pct": 14.08,
+      "current_price": 0.3585,
+      "distance_pct": 12.42,
       "score": 86.2,
       "grade": "A",
       "status": "WAITING",
@@ -577,7 +577,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-07-14T00:00:00+00:00"
@@ -587,8 +587,8 @@
       "timeframe": "1D",
       "zone_low": 0.2267,
       "zone_high": 0.2504,
-      "current_price": 0.4213,
-      "distance_pct": 68.25,
+      "current_price": 0.4117,
+      "distance_pct": 64.42,
       "score": 83.8,
       "grade": "A",
       "status": "WAITING",
@@ -597,7 +597,7 @@
         "3D",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-05-19T00:00:00+00:00"
@@ -607,8 +607,8 @@
       "timeframe": "3D",
       "zone_low": 0.0767,
       "zone_high": 0.083,
-      "current_price": 0.0943,
-      "distance_pct": 13.61,
+      "current_price": 0.0925,
+      "distance_pct": 11.45,
       "score": 83.5,
       "grade": "A",
       "status": "WAITING",
@@ -618,7 +618,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-17T00:00:00+00:00"
@@ -628,8 +628,8 @@
       "timeframe": "1D",
       "zone_low": 74.1,
       "zone_high": 75.71,
-      "current_price": 103.47,
-      "distance_pct": 36.67,
+      "current_price": 102.31,
+      "distance_pct": 35.13,
       "score": 83.4,
       "grade": "A",
       "status": "WAITING",
@@ -639,7 +639,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T00:00:00+00:00"
@@ -649,8 +649,8 @@
       "timeframe": "4H",
       "zone_low": 76.63,
       "zone_high": 77.17,
-      "current_price": 103.48,
-      "distance_pct": 34.09,
+      "current_price": 102.31,
+      "distance_pct": 32.58,
       "score": 83.4,
       "grade": "A",
       "status": "WAITING",
@@ -660,7 +660,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
@@ -670,8 +670,8 @@
       "timeframe": "4H",
       "zone_low": 2.015,
       "zone_high": 2.064,
-      "current_price": 2.396,
-      "distance_pct": 16.09,
+      "current_price": 2.388,
+      "distance_pct": 15.7,
       "score": 82.9,
       "grade": "A",
       "status": "WAITING",
@@ -681,7 +681,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T08:00:00+00:00"
@@ -733,8 +733,8 @@
       "timeframe": "1D",
       "zone_low": 0.0831,
       "zone_high": 0.091,
-      "current_price": 0.1483,
-      "distance_pct": 62.97,
+      "current_price": 0.145,
+      "distance_pct": 59.34,
       "score": 81.1,
       "grade": "A",
       "status": "WAITING",
@@ -744,7 +744,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-30T00:00:00+00:00"
@@ -754,8 +754,8 @@
       "timeframe": "1D",
       "zone_low": 62535.24,
       "zone_high": 63617.45,
-      "current_price": 78781.13,
-      "distance_pct": 23.84,
+      "current_price": 77955.64,
+      "distance_pct": 22.54,
       "score": 80.9,
       "grade": "A",
       "status": "WAITING",
@@ -765,7 +765,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T00:00:00+00:00"
@@ -775,8 +775,8 @@
       "timeframe": "3D",
       "zone_low": 29.5,
       "zone_high": 30.7,
-      "current_price": 58.1,
-      "distance_pct": 89.25,
+      "current_price": 56.6,
+      "distance_pct": 84.36,
       "score": 80.9,
       "grade": "A",
       "status": "WAITING",
@@ -786,7 +786,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-15T00:00:00+00:00"
@@ -796,8 +796,8 @@
       "timeframe": "1D",
       "zone_low": 6.22,
       "zone_high": 6.455,
-      "current_price": 7.714,
-      "distance_pct": 19.5,
+      "current_price": 7.637,
+      "distance_pct": 18.31,
       "score": 80.8,
       "grade": "A",
       "status": "WAITING",
@@ -807,7 +807,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -817,8 +817,8 @@
       "timeframe": "3D",
       "zone_low": 0.00434,
       "zone_high": 0.004662,
-      "current_price": 0.007447,
-      "distance_pct": 59.74,
+      "current_price": 0.007352,
+      "distance_pct": 57.7,
       "score": 79.6,
       "grade": "B",
       "status": "WAITING",
@@ -828,7 +828,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-15T00:00:00+00:00"
@@ -838,8 +838,8 @@
       "timeframe": "4H",
       "zone_low": 0.004369,
       "zone_high": 0.004429,
-      "current_price": 0.007447,
-      "distance_pct": 68.14,
+      "current_price": 0.007352,
+      "distance_pct": 66.0,
       "score": 79.6,
       "grade": "B",
       "status": "WAITING",
@@ -849,7 +849,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
@@ -859,8 +859,8 @@
       "timeframe": "1D",
       "zone_low": 4.36e-06,
       "zone_high": 4.48e-06,
-      "current_price": 5.35e-06,
-      "distance_pct": 19.42,
+      "current_price": 5.28e-06,
+      "distance_pct": 17.86,
       "score": 79.5,
       "grade": "B",
       "status": "WAITING",
@@ -870,7 +870,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -880,8 +880,8 @@
       "timeframe": "1D",
       "zone_low": 0.0767,
       "zone_high": 0.0789,
-      "current_price": 0.0943,
-      "distance_pct": 19.52,
+      "current_price": 0.0925,
+      "distance_pct": 17.24,
       "score": 79.1,
       "grade": "B",
       "status": "WAITING",
@@ -891,7 +891,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -901,8 +901,8 @@
       "timeframe": "1D",
       "zone_low": 0.1712,
       "zone_high": 0.177,
-      "current_price": 0.214,
-      "distance_pct": 20.9,
+      "current_price": 0.2094,
+      "distance_pct": 18.31,
       "score": 78.0,
       "grade": "B",
       "status": "WAITING",
@@ -912,7 +912,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -922,8 +922,8 @@
       "timeframe": "1D",
       "zone_low": 0.0722,
       "zone_high": 0.076,
-      "current_price": 0.1483,
-      "distance_pct": 95.13,
+      "current_price": 0.145,
+      "distance_pct": 90.79,
       "score": 77.5,
       "grade": "B",
       "status": "WAITING",
@@ -933,7 +933,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -943,8 +943,8 @@
       "timeframe": "4H",
       "zone_low": 64166.0,
       "zone_high": 64409.93,
-      "current_price": 78781.12,
-      "distance_pct": 22.31,
+      "current_price": 77955.65,
+      "distance_pct": 21.03,
       "score": 77.1,
       "grade": "B",
       "status": "WAITING",
@@ -954,7 +954,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
@@ -964,8 +964,8 @@
       "timeframe": "4H",
       "zone_low": 601.39,
       "zone_high": 602.6,
-      "current_price": 738.68,
-      "distance_pct": 22.58,
+      "current_price": 732.93,
+      "distance_pct": 21.63,
       "score": 77.1,
       "grade": "B",
       "status": "WAITING",
@@ -975,7 +975,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
@@ -985,8 +985,8 @@
       "timeframe": "4H",
       "zone_low": 0.3216,
       "zone_high": 0.3268,
-      "current_price": 0.3638,
-      "distance_pct": 11.32,
+      "current_price": 0.3585,
+      "distance_pct": 9.7,
       "score": 77.1,
       "grade": "B",
       "status": "WAITING",
@@ -996,7 +996,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T08:00:00+00:00"
@@ -1006,8 +1006,8 @@
       "timeframe": "3D",
       "zone_low": 0.0722,
       "zone_high": 0.076,
-      "current_price": 0.1483,
-      "distance_pct": 95.13,
+      "current_price": 0.145,
+      "distance_pct": 90.79,
       "score": 77.1,
       "grade": "B",
       "status": "WAITING",
@@ -1017,7 +1017,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T00:00:00+00:00"
@@ -1027,8 +1027,8 @@
       "timeframe": "3D",
       "zone_low": 43.39,
       "zone_high": 45.08,
-      "current_price": 54.19,
-      "distance_pct": 20.21,
+      "current_price": 53.75,
+      "distance_pct": 19.23,
       "score": 76.9,
       "grade": "B",
       "status": "WAITING",
@@ -1038,7 +1038,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T00:00:00+00:00"
@@ -1048,8 +1048,8 @@
       "timeframe": "1D",
       "zone_low": 36.91,
       "zone_high": 40.15,
-      "current_price": 58.1,
-      "distance_pct": 44.71,
+      "current_price": 56.59,
+      "distance_pct": 40.95,
       "score": 76.6,
       "grade": "B",
       "status": "WAITING",
@@ -1059,7 +1059,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-28T00:00:00+00:00"
@@ -1069,8 +1069,8 @@
       "timeframe": "1D",
       "zone_low": 4011.27,
       "zone_high": 4090.1,
-      "current_price": 4372.96,
-      "distance_pct": 6.92,
+      "current_price": 4367.76,
+      "distance_pct": 6.79,
       "score": 76.4,
       "grade": "B",
       "status": "WAITING",
@@ -1080,7 +1080,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-04T00:00:00+00:00"
@@ -1090,8 +1090,8 @@
       "timeframe": "4H",
       "zone_low": 29.62,
       "zone_high": 29.84,
-      "current_price": 58.14,
-      "distance_pct": 94.84,
+      "current_price": 56.59,
+      "distance_pct": 89.64,
       "score": 75.9,
       "grade": "B",
       "status": "WAITING",
@@ -1101,7 +1101,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
@@ -1132,8 +1132,8 @@
       "timeframe": "1D",
       "zone_low": 0.0794,
       "zone_high": 0.0843,
-      "current_price": 0.0943,
-      "distance_pct": 11.86,
+      "current_price": 0.0925,
+      "distance_pct": 9.73,
       "score": 75.3,
       "grade": "B",
       "status": "WAITING",
@@ -1143,39 +1143,18 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-03-30T00:00:00+00:00"
-    },
-    {
-      "symbol": "LINK/USDT",
-      "timeframe": "3D",
-      "zone_low": 7.888,
-      "zone_high": 8.455,
-      "current_price": 11.993,
-      "distance_pct": 41.85,
-      "score": 74.8,
-      "grade": "B",
-      "status": "WAITING",
-      "freshness": "fresh",
-      "confluent_timeframes": [
-        "1D",
-        "4H",
-        "3D"
-      ],
-      "btc_condition": "Strong",
-      "alert_sent": false,
-      "alert_time": null,
-      "creation_date": "2026-08-07T00:00:00+00:00"
     },
     {
       "symbol": "ETHFI/USDT",
       "timeframe": "3D",
       "zone_low": 0.3497,
       "zone_high": 0.3982,
-      "current_price": 0.6904,
-      "distance_pct": 73.38,
+      "current_price": 0.698,
+      "distance_pct": 75.29,
       "score": 74.7,
       "grade": "B",
       "status": "WAITING",
@@ -1185,7 +1164,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-08T00:00:00+00:00"
@@ -1195,8 +1174,8 @@
       "timeframe": "1D",
       "zone_low": 4021.0,
       "zone_high": 4099.22,
-      "current_price": 4377.01,
-      "distance_pct": 6.78,
+      "current_price": 4371.39,
+      "distance_pct": 6.64,
       "score": 74.4,
       "grade": "B",
       "status": "WAITING",
@@ -1206,7 +1185,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-04T00:00:00+00:00"
@@ -1216,8 +1195,8 @@
       "timeframe": "4H",
       "zone_low": 0.005533,
       "zone_high": 0.005701,
-      "current_price": 0.007447,
-      "distance_pct": 30.63,
+      "current_price": 0.007352,
+      "distance_pct": 28.96,
       "score": 74.1,
       "grade": "B",
       "status": "WAITING",
@@ -1226,7 +1205,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-26T12:00:00+00:00"
@@ -1236,8 +1215,8 @@
       "timeframe": "3D",
       "zone_low": 4.654,
       "zone_high": 5.1,
-      "current_price": 6.084,
-      "distance_pct": 19.29,
+      "current_price": 5.93,
+      "distance_pct": 16.27,
       "score": 74.0,
       "grade": "B",
       "status": "WAITING",
@@ -1247,7 +1226,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-09-02T00:00:00+00:00"
@@ -1257,8 +1236,8 @@
       "timeframe": "3D",
       "zone_low": 1.538,
       "zone_high": 1.683,
-      "current_price": 2.694,
-      "distance_pct": 60.07,
+      "current_price": 2.653,
+      "distance_pct": 57.64,
       "score": 73.7,
       "grade": "B",
       "status": "WAITING",
@@ -1268,7 +1247,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-14T00:00:00+00:00"
@@ -1278,8 +1257,8 @@
       "timeframe": "4H",
       "zone_low": 1.913,
       "zone_high": 1.931,
-      "current_price": 2.396,
-      "distance_pct": 24.08,
+      "current_price": 2.388,
+      "distance_pct": 23.67,
       "score": 73.5,
       "grade": "B",
       "status": "WAITING",
@@ -1289,7 +1268,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-14T12:00:00+00:00"
@@ -1299,8 +1278,8 @@
       "timeframe": "4H",
       "zone_low": 1.425,
       "zone_high": 1.433,
-      "current_price": 2.222,
-      "distance_pct": 55.06,
+      "current_price": 2.203,
+      "distance_pct": 53.73,
       "score": 73.2,
       "grade": "B",
       "status": "WAITING",
@@ -1310,10 +1289,31 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-16T04:00:00+00:00"
+    },
+    {
+      "symbol": "LINK/USDT",
+      "timeframe": "3D",
+      "zone_low": 7.888,
+      "zone_high": 8.455,
+      "current_price": 11.797,
+      "distance_pct": 39.53,
+      "score": 73.1,
+      "grade": "B",
+      "status": "WAITING",
+      "freshness": "fresh",
+      "confluent_timeframes": [
+        "1D",
+        "4H",
+        "3D"
+      ],
+      "btc_condition": "Neutral",
+      "alert_sent": false,
+      "alert_time": null,
+      "creation_date": "2026-08-07T00:00:00+00:00"
     },
     {
       "symbol": "CRV/USDT",
@@ -1337,33 +1337,12 @@
       "creation_date": "2026-08-06T00:00:00+00:00"
     },
     {
-      "symbol": "UNI/USDT",
-      "timeframe": "3D",
-      "zone_low": 3.171,
-      "zone_high": 3.53,
-      "current_price": 6.364,
-      "distance_pct": 80.28,
-      "score": 73.0,
-      "grade": "B",
-      "status": "WAITING",
-      "freshness": "fresh",
-      "confluent_timeframes": [
-        "1D",
-        "4H",
-        "3D"
-      ],
-      "btc_condition": "Strong",
-      "alert_sent": false,
-      "alert_time": null,
-      "creation_date": "2026-08-14T00:00:00+00:00"
-    },
-    {
       "symbol": "JUP/USDT",
       "timeframe": "1D",
       "zone_low": 0.1638,
       "zone_high": 0.1687,
-      "current_price": 0.2523,
-      "distance_pct": 49.56,
+      "current_price": 0.2476,
+      "distance_pct": 46.77,
       "score": 72.9,
       "grade": "B",
       "status": "WAITING",
@@ -1373,7 +1352,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -1383,8 +1362,8 @@
       "timeframe": "1D",
       "zone_low": 0.3674,
       "zone_high": 0.3932,
-      "current_price": 0.6904,
-      "distance_pct": 75.58,
+      "current_price": 0.698,
+      "distance_pct": 77.52,
       "score": 72.9,
       "grade": "B",
       "status": "WAITING",
@@ -1394,7 +1373,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-12T00:00:00+00:00"
@@ -1404,8 +1383,8 @@
       "timeframe": "4H",
       "zone_low": 10.5,
       "zone_high": 10.727,
-      "current_price": 11.993,
-      "distance_pct": 11.8,
+      "current_price": 11.796,
+      "distance_pct": 9.97,
       "score": 72.9,
       "grade": "B",
       "status": "WAITING",
@@ -1415,7 +1394,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-20T20:00:00+00:00"
@@ -1425,8 +1404,8 @@
       "timeframe": "4H",
       "zone_low": 1.256,
       "zone_high": 1.273,
-      "current_price": 1.445,
-      "distance_pct": 13.51,
+      "current_price": 1.426,
+      "distance_pct": 12.02,
       "score": 72.4,
       "grade": "B",
       "status": "WAITING",
@@ -1436,7 +1415,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T08:00:00+00:00"
@@ -1446,8 +1425,8 @@
       "timeframe": "4H",
       "zone_low": 0.314,
       "zone_high": 0.3215,
-      "current_price": 0.4213,
-      "distance_pct": 31.04,
+      "current_price": 0.4118,
+      "distance_pct": 28.09,
       "score": 72.2,
       "grade": "B",
       "status": "WAITING",
@@ -1457,7 +1436,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T08:00:00+00:00"
@@ -1467,8 +1446,8 @@
       "timeframe": "1D",
       "zone_low": 600.0,
       "zone_high": 606.0,
-      "current_price": 738.8,
-      "distance_pct": 21.91,
+      "current_price": 732.92,
+      "distance_pct": 20.94,
       "score": 72.1,
       "grade": "B",
       "status": "WAITING",
@@ -1478,7 +1457,7 @@
         "4H",
         "1D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-18T00:00:00+00:00"
@@ -1509,8 +1488,8 @@
       "timeframe": "4H",
       "zone_low": 1906.0,
       "zone_high": 1921.32,
-      "current_price": 2612.95,
-      "distance_pct": 36.0,
+      "current_price": 2571.88,
+      "distance_pct": 33.86,
       "score": 71.8,
       "grade": "B",
       "status": "WAITING",
@@ -1520,10 +1499,31 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-08-19T04:00:00+00:00"
+    },
+    {
+      "symbol": "UNI/USDT",
+      "timeframe": "3D",
+      "zone_low": 3.171,
+      "zone_high": 3.53,
+      "current_price": 6.231,
+      "distance_pct": 76.52,
+      "score": 71.4,
+      "grade": "B",
+      "status": "WAITING",
+      "freshness": "fresh",
+      "confluent_timeframes": [
+        "1D",
+        "4H",
+        "3D"
+      ],
+      "btc_condition": "Neutral",
+      "alert_sent": false,
+      "alert_time": null,
+      "creation_date": "2026-08-14T00:00:00+00:00"
     },
     {
       "symbol": "CRV/USDT",
@@ -1551,8 +1551,8 @@
       "timeframe": "4H",
       "zone_low": 60.72,
       "zone_high": 61.85,
-      "current_price": 65.48,
-      "distance_pct": 5.87,
+      "current_price": 64.93,
+      "distance_pct": 4.98,
       "score": 71.3,
       "grade": "B",
       "status": "WAITING",
@@ -1562,7 +1562,7 @@
         "1D",
         "4H"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-09-01T04:00:00+00:00"
@@ -1614,8 +1614,8 @@
       "timeframe": "3D",
       "zone_low": 0.309,
       "zone_high": 0.339,
-      "current_price": 0.6904,
-      "distance_pct": 103.66,
+      "current_price": 0.698,
+      "distance_pct": 105.9,
       "score": 70.9,
       "grade": "B",
       "status": "WAITING",
@@ -1625,7 +1625,7 @@
         "4H",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-06-30T00:00:00+00:00"
@@ -1677,8 +1677,8 @@
       "timeframe": "3D",
       "zone_low": 0.1395,
       "zone_high": 0.1506,
-      "current_price": 0.1845,
-      "distance_pct": 22.51,
+      "current_price": 0.1818,
+      "distance_pct": 20.72,
       "score": 70.0,
       "grade": "B",
       "status": "WAITING",
@@ -1687,7 +1687,7 @@
         "1D",
         "3D"
       ],
-      "btc_condition": "Strong",
+      "btc_condition": "Neutral",
       "alert_sent": false,
       "alert_time": null,
       "creation_date": "2026-05-22T00:00:00+00:00"
